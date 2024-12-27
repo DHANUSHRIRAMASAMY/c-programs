@@ -1,0 +1,12 @@
+#include <stdio.h>
+typedef int* IntPtr;
+int main() {
+ int x = 10;
+ IntPtr ptr = &x; // Using typedef pointer type
+ printf("Value of x: %d\n", *ptr);
+ return 0;
+}
+*****************************************
+OUTPUT:
+Value of x:10
+*****************************************
