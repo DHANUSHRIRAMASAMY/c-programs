@@ -1,0 +1,34 @@
+#include <stdio.h>
+struct Car {
+    char model[50];
+    int year;
+    float price;
+};
+
+int main() {
+    struct Car myCar;
+    printf("Enter the car model: ");
+    scanf("%s", myCar.model);
+    printf("Enter the manufacturing year: ");
+    scanf("%d",&myCar.year);
+    printf("Enter the price of the car:");
+    scanf("%f",&myCar.price);
+    struct Car *carPtr = &myCar;
+    printf("\nCar Details:\n");
+    printf("Model: %s\n", carPtr->model);
+    printf("Year: %d\n", carPtr->year);
+    printf("Price: $%.2f\n", carPtr->price);
+
+    return 0;
+}
+*****************************************************
+INPUT:
+Enter the car model:Toyato
+Enter the manufacturing year:2023
+Enter the price of the car:2000000
+
+OUTPUT:
+Model:Toyato
+Year:2023
+Price:$2000000
+*****************************************************
